@@ -1,0 +1,43 @@
+\ProvidesPackage{codeenv}
+
+\usepackage{listings}
+\usepackage{lstautogobble}
+\usepackage{courier}
+
+% Use a monospaced font (courier), for source code listings (because quite frankly you'd be an idiot not to)
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    breaklines=true
+}
+
+% Load the default language
+\lstloadlanguages{python}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{grey}{rgb}{0.5,0.5,0.5}
+\definecolor{pink}{rgb}{205,0,205}
+
+\lstdefinestyle{default}{%
+    basicstyle=\scriptsize\ttfamily,
+    keywordstyle=\bf\color{blue}\ttfamily,
+    stringstyle=\color{orange!50!brown}\ttfamily,
+    commentstyle=\color{red}\ttfamily,
+    morecomment=[l][\color{magenta}]{\#},
+    showstringspaces=false,
+    numberstyle=\tiny\color{grey},
+    tabsize=4,
+    breaklines
+}
+
+\lstnewenvironment{code}[2][] {
+    \lstset{language=#2,
+        style=default,
+        autogobble,
+        escapechar=§,
+        #1
+    }
+}{}
+
+\newcommand{\codefile}[2][python]{
+    \lstinputlisting[language=#1,style=default]{#2}
+}
