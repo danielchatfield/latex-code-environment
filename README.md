@@ -25,8 +25,8 @@ If you want to override the amount of whitespace to gobble (i.e. when the first 
     \end{code}
 ```
 
-### Embedded laTeX
-You can embed laTeX code inside the code:
+### Embedded LaTeX
+You can embed LaTeX code inside the code:
 
 ```latex
 \begin{code}{python}
