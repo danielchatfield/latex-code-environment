@@ -35,7 +35,7 @@ You can embed LaTeX code inside the code:
 \end{code}
 ```
 
-The character for escaping into laTeX was chosen as `§` as Apple keyboards have a dedicated key for this and it isn't used for anything else. I appreciate that for non-osx users this may be a bit annoying. You can override it like so:
+The character for escaping into LaTeX was chosen as `§` as Apple keyboards have a dedicated key for this and it isn't used for anything else. I appreciate that for non-osx users this may be a bit annoying. You can override it like so:
 
 ```latex
 \begin{code}[escapechar=?]{python}
