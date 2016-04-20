@@ -11,23 +11,23 @@
     breaklines=true
 }
 
-% Load the default language
-\lstloadlanguages{python}
-
-\definecolor{dkgreen}{rgb}{0,0.6,0}
-\definecolor{grey}{rgb}{0.5,0.5,0.5}
-\definecolor{pink}{rgb}{205,0,205}
+\definecolor{comment}{HTML}{999988}
+\definecolor{keyword}{HTML}{222222}
+\definecolor{function}{HTML}{445588}
+\definecolor{type}{HTML}{555555}
 
 \lstdefinestyle{default}{%
     basicstyle=\scriptsize\ttfamily,
-    keywordstyle=\bf\color{blue}\ttfamily,
-    stringstyle=\color{orange!50!brown}\ttfamily,
-    commentstyle=\color{red}\ttfamily,
+    keywordstyle=\bf\color{function}\ttfamily,
+    stringstyle=\color{red}\ttfamily,
+    commentstyle=\it\color{comment}\ttfamily,
     morecomment=[l][\color{magenta}]{\#},
     showstringspaces=false,
-    numberstyle=\tiny\color{grey},
+    numberstyle=\tiny\color{red},
     tabsize=4,
-    breaklines
+    breaklines,
+    numbers=left,
+    numberstyle=\tiny\color{type}
 }
 
 \lstnewenvironment{code}[2][] {
@@ -39,6 +39,6 @@
     }
 }{}
 
-\newcommand{\codefile}[2][python]{
-    \lstinputlisting[language=#1,style=default]{#2}
+\newcommand{\codefile}[2][]{
+    \lstinputlisting[style=default, #1]{#2}
 }
